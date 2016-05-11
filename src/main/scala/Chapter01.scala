@@ -21,6 +21,31 @@ object Chapter01 {
       else
         x.multiply(factorial2(x.subtract(BigInteger.ONE)))
     println(factorial2(BigInteger.valueOf(30)))
+
+    // actor example named recipient
+    // ```
+    // recipient ! msg
+    // ```
+
+    // actor has mailbox queued received message
+    // ```
+    // receive {
+    //   case Msg1 => ... // Msg1 の処理
+    //   case Msg2 => ... // Msg2 の処理
+    //   ...
+    // }
+
+    // actor example for calculate checksum service
+    // ```
+    // actor {
+    //   var sum = 0
+    //   loop {
+    //     receive {
+    //       case Data(bytes)       => sum += hash(bytes)
+    //       case GetSum(requester) => requester ! sum
+    //   }
+    // }
+
   }
 
 }
