@@ -55,6 +55,19 @@ object Chapter01 {
                          // s cast java.lang.String to scala.collection.immutable.StringOps with implicit conversion
                          // scala.collection.immutable.StringOps has toInt
     println(i)
+
+    // Class having constructor in Java
+    // class MyClass {
+    //   private int index;
+    //   private String name;
+    //   public MyClass(int index, String name) {
+    //     this.index = index;
+    //     this.name = name;
+    //   }
+    // }
+
+    // Class having constructor in Scala
+    class MyClass(var index: Int, var name: String) {}
   }
 
 }
