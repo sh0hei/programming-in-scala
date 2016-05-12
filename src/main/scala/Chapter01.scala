@@ -44,10 +44,17 @@ object Chapter01 {
     //     receive {
     //       case Data(bytes)       => sum += hash(bytes)
     //       case GetSum(requester) => requester ! sum
+    //     }
     //   }
     // }
     // ```
 
+    // implicit conversion
+    val s: String = "42" // java.lang.String
+    val i: Int = s.toInt // java.lang.String has not toInt method
+                         // s cast java.lang.String to scala.collection.immutable.StringOps with implicit conversion
+                         // scala.collection.immutable.StringOps has toInt
+    println(i)
   }
 
 }
