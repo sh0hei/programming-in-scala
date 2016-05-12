@@ -34,6 +34,7 @@ object Chapter01 {
     //   case Msg2 => ... // Msg2 の処理
     //   ...
     // }
+    // ```
 
     // actor example for calculate checksum service
     // ```
@@ -45,6 +46,7 @@ object Chapter01 {
     //       case GetSum(requester) => requester ! sum
     //   }
     // }
+    // ```
 
   }
 
