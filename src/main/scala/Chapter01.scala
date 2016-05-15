@@ -68,6 +68,37 @@ object Chapter01 {
 
     // Class having constructor in Scala
     class MyClass(var index: Int, var name: String) {}
+
+    // a String variable has uppercase letter or not ? in Java
+    // ループで１文字ずつ処理する低水準の存在として文字列を扱っている
+    String name = "Alice";
+    boolean nameHasUpperCase = false;
+    for (int i = 0; i < name.length(); ++i) {
+      if (Character.isUpperCase(name.charAt(i))) {
+        nameHasUpperCase = true;
+        break;
+      }
+    }
+
+    // a String variable has uppercase letter or not ? in Scala
+    // 述語関数 (predicate) でテストできる高水準の存在として文字列を扱っている
+    // 結果型が Boolean となる関数リテラルは述語関数と呼ぶ事ができる
+    val name: String = "Alice"
+    val nameHasUpperCase = name.exists(_.isUpper)
+
+    // Java での実現例
+    // 実際にはループを使ったチェックで済ます事が多い
+    // interface CharacterProperty {
+    //   boolean hasProperty(char ch);
+    // }
+
+    // exists(name, new CharacterProperty() {
+    //   public boolean hasProperty(char ch) {
+    //     return Character.isUpperCase(ch);
+    //   }
+    // });
+
+
   }
 
 }
