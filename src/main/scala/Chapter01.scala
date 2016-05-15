@@ -1,3 +1,5 @@
+import scala.collection.immutable.HashMap
+
 /**
   * A Scalable Language
   */
@@ -71,14 +73,14 @@ object Chapter01 {
 
     // a String variable has uppercase letter or not ? in Java
     // ループで１文字ずつ処理する低水準の存在として文字列を扱っている
-    String name = "Alice";
-    boolean nameHasUpperCase = false;
-    for (int i = 0; i < name.length(); ++i) {
-      if (Character.isUpperCase(name.charAt(i))) {
-        nameHasUpperCase = true;
-        break;
-      }
-    }
+    // String name = "Alice";
+    // boolean nameHasUpperCase = false;
+    // for (int i = 0; i < name.length(); ++i) {
+    //   if (Character.isUpperCase(name.charAt(i))) {
+    //     nameHasUpperCase = true;
+    //     break;
+    //   }
+    // }
 
     // a String variable has uppercase letter or not ? in Scala
     // 述語関数 (predicate) でテストできる高水準の存在として文字列を扱っている
@@ -98,7 +100,11 @@ object Chapter01 {
     //   }
     // });
 
+    // Scala has Type inference
+    val x: HashMap[Int, String] = new HashMap[Int, String]()
 
+    val y = new HashMap[Int, String]()
+    val z: Map[Int, String] = new HashMap()
   }
 
 }
