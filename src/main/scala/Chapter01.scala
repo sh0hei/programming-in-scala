@@ -53,7 +53,7 @@ object Chapter01 {
 
     // implicit conversion
     val s: String = "42" // java.lang.String
-    val i: Int = s.toInt // java.lang.String has not toInt method
+    val i: Int = s.toInt // java.lang.String doesn't have toInt method
                          // s cast java.lang.String to scala.collection.immutable.StringOps with implicit conversion
                          // scala.collection.immutable.StringOps has toInt
     println(i)

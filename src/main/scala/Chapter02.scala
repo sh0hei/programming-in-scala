@@ -38,5 +38,16 @@ object Chapter02 {
     // * a method result type is Unit is executes for side effects only *
     def greet() = println("Hello, world!")
 
+    // hello.scala
+    // println("Hello, world, from a script!")
+    // $ scala hello.scala
+    // Hello, world, from a script!
+
+    // helloarg.scala
+    // println("Hello, " + args(0) + "!")
+    // $ scala helloarg.scala planet
+    // Hello, planet!
+
+
   }
 }
