@@ -48,6 +48,29 @@ object Chapter02 {
     // $ scala helloarg.scala planet
     // Hello, planet!
 
+    // printargs.scala
+    // var i = 0
+    // while (i < args.length) {
+    //   println(args(i))
+    //   i += 1
+    // }
+    // $ scala printargs.scala foo bar fizz buzz
+    // foo
+    // bar
+    // fizz
+    // buzz
 
+    // echoargs.scala
+    // var i = 0
+    // while (i < args.length) {
+    //   if (i != 0)
+    //     print(" ")
+    //   print(args(i))
+    //   i += 1
+    // }
+    // println()
+    // $ scala echoargs.scala alice bob chris
+    // alich bob chris
+    
   }
 }
