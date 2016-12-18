@@ -10,13 +10,41 @@ object Chapter02 {
     // scala> 1 + 2
     // res0: Int = 3 // Scala has package same as Java
     // res0 * 3      // Scala has Class corresponding Java primitive types
-    // res1: 9       // scalac use Java primitive types as much as possible when compile Scala code to Java bytecode
+    // res1: 9       // scalac use Java primitive types as much as possible when compile Scala code to Java bytecode for performance
     // println("Hello, world")
     // Hello, world!
     // :quit
 
     // Scala has type inference
     val msg = "Hello, world!"
+
+    // explicit type annotation as intended by programmer, and as a document
+    val msg2: java.lang.String = "Hello again, world!"
+    val msg3: String = "Hello yet again, world!"
+
+    // val is similar to Java final variable
+    // var is similar to Java not final variable
+    //
+    // scala> msg = "Goodbye cruel world!"
+    // <console>:12: error: reassignment to val
+    //        msg = "Goodbye cruel world!"
+    //            ^
+    //
+    var greeting = "Hello, world!"
+    greeting = "Leave me alone, world!"
+
+    // multiline input
+    //
+    // scala> val multiLine =
+    //      | "This is the next ine."
+    // multiLine: String = This is the next line.
+
+    // Typing 2 [Enter], escaping from waiting input (e.g. typo)
+    //
+    // scala> val oops =
+    //      |
+    //      |
+    // You typed two blank lines.  Starting a new command.
 
     // scalac doesn't use type inference for parameter list
     // max: (x: Int, y: Int)Int
